@@ -9,7 +9,15 @@
 #include "Courses.h"
 #include "Shedules.h"
 #include "Database.h"
+
 using namespace std;
+
+#if __cplusplus == 201103L // If using C++11, define make_unique
+template<typename T, typename... Args>
+std::unique_ptr<T> make_unique(Args&&... args) {
+    return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
+}
+#endif
 
 int main() {
     Database database;
@@ -72,7 +80,7 @@ int main() {
                 case 2: student->registerSpecialCourse("Physics : Lab"); break;
                 case 3: student->registerSpecialCourse("Welcoming Lecture"); break;
                 }
-                cout << "Congratulations! You have successfully registered for the special course. \n+The user registration information are : " << endl;
+                cout << "Congratulations! You have successfully registered for the special course. \nThe user registration information are : " << endl;
             }
             else {
                 cout << "Invalid course number." << endl;
