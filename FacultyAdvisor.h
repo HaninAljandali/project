@@ -1,32 +1,34 @@
-#ifndef FacultyAdvisor_H
-#define FacultyAdvisor_h
+#ifndef FACULTYADVISOR_H
+#define FACULTYADVISOR_H
+
 #include <iostream>
 #include <vector>
 #include <string>
+#include "User.h"
 
 class FacultyAdvisor : public User {
-    string department;
-    vector<string> schedule;
+    std::string department;
+    std::vector<std::string> schedule;
 public:
-    FacultyAdvisor(string name, string dept) : User(name), department(dept) {}
+    FacultyAdvisor(std::string name, std::string dept) : User(name), department(dept) {}
 
     void displayInfo() const override {
-        cout << "Faculty Advisor Name: " << userName << endl;
-        cout << "Department: " << department << endl;
-        cout << "Schedule: ";
-        for (const auto& scheduleItem : schedule) { //The variable scheduleItem belongs to schedule
-            cout << scheduleItem << " ";
+        std::cout << "Faculty Advisor Name: " << userName << std::endl;
+        std::cout << "Department: " << department << std::endl;
+        std::cout << "Schedule: ";
+        for (const auto& scheduleItem : schedule) {
+            std::cout << scheduleItem << " ";
         }
-        cout << endl;
+        std::cout << std::endl;
     }
 
-    void setSchedule(const vector<string>& schedule) { //Sets schedule of current object to schedule vector
+    void setSchedule(const std::vector<std::string>& schedule) {
         this->schedule = schedule;
     }
 
-    string getDepartment() const { //Returns the department of the object
+    std::string getDepartment() const {
         return department;
     }
 };
 
-#endif
+#endif // FACULTYADVISOR_H
