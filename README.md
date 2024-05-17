@@ -18,8 +18,7 @@ A brief description of your project and what it does.
 ### 1. Clone the Repository
 Open your terminal (Mac) or Command Prompt/PowerShell (Windows) and run the following command:
 ```sh
-git clone https://github.com/Haninaljandali/major_assignment.git
-cd major_assignment
+git clone https://github.com/HaninAljandali/project.git
 
 2. Install Prerequisites
 Mac
