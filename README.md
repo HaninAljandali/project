@@ -19,8 +19,9 @@ A brief description of your project and what it does.
 Open your terminal (Mac) or Command Prompt/PowerShell (Windows) and run the following command:
 ```sh
 git clone https://github.com/HaninAljandali/project.git
+cd project
 
-2. Install Prerequisites
+### 2. Install Prerequisites
 Mac
 
 Ensure you have Xcode Command Line Tools installed. Run the following command to install them if you haven't:xcode-select --install
