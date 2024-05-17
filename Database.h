@@ -24,7 +24,7 @@ public:
     }
 
     void addUser(unique_ptr<User> user) { //Transferring ownership using unique_ptr
-        users.push_back(move(user)); //Adds a user from user to the users collection
+        users.push_back(std::move(user)); //Adds a user from user to the users collection
     }
 
     void addCourse(const Course& course) { //Stores the course to the courses vector
